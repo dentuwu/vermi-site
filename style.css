@@ -1,0 +1,155 @@
+:root {
+  --gap: 24px;
+  --content-gap: 20px;
+  --nav-width: 1024px;
+  --main-width: 720px;
+  --header-height: 60px;
+  --footer-height: 60px;
+  --radius: 8px;
+  --theme: rgb(255, 255, 255);
+  --entry: rgb(255, 255, 255);
+  --primary: rgb(30, 30, 30);
+  --secondary: rgb(108, 108, 108);
+  --tertiary: rgb(214, 214, 214);
+  --content: rgb(31, 31, 31);
+  --hljs-bg: rgb(28, 29, 33);
+  --code-bg: rgb(245, 245, 245);
+  --border: rgb(238, 238, 238)
+}.dark {
+  --theme: rgb(29, 30, 32);
+  --entry: rgb(46, 46, 51);
+  --primary: rgb(218, 218, 219);
+  --secondary: rgb(155, 156, 157);
+  --tertiary: rgb(65, 66, 68);
+  --content: rgb(196, 196, 197);
+  --hljs-bg: rgb(46, 46, 51);
+  --code-bg: rgb(55, 56, 62);
+  --border: rgb(51, 51, 51)
+}
+
+body {
+  color: var(--primary);
+  background-color: rgb(29, 30, 32);
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, segoe ui, Roboto, Oxygen, Ubuntu, Cantarell, open sans, helvetica neue, sans-serif;
+  font-size: 18px;
+  word-break: break-word;
+  background: var(--theme)
+}
+
+body.dark #moon {
+  vertical-align: middle;
+  display: none
+}
+
+body:not(.dark) #sun {
+  display: none
+}
+
+.logo {
+  display: flex;
+  margin: auto var(--gap);
+  flex-wrap: inherit;
+  padding-top: 11px;
+}
+
+button {
+  padding: 0;
+  font: inherit;
+  background: 0 0;
+  border: 0;
+  cursor: pointer
+}
+
+#theme-toggle {
+  position: absolute;
+  float: right;
+  top: 10px;
+  right: 13px;
+}
+
+#theme-toggle svg {
+  color: var(--primary);
+  width: 40px;
+  height: 40px;
+}
+
+.info {
+  text-align: center;
+}
+
+.avatar {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 10px;
+  right: 370px;
+  top: 280px;
+  width: 200px;
+  background-repeat: no-repeat;
+  border-radius: 120px;
+  border: 2px solid rgb(63, 7, 168);
+}
+
+.hello {
+  position: relative;
+  margin-left: 45px;
+  margin-top: 220px;
+}
+
+.bio {
+  padding-top: 5px;
+  padding-left: 370px;
+}
+
+.social-icons {
+  position:relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right:0%;
+  padding-top: 150px;
+}
+.social-icons a svg {
+  color: var(--primary);
+  margin-inline-end: 50px;
+  height: 48px;
+  width: 48px
+}
+
+@media only screen and (max-width: 885px) {
+  .hello {
+    margin-left: 17px;
+    margin-top: 280px;
+  }
+  .avatar {
+    left: 0px;
+    right: 0px;
+    top: 120px;
+  }
+  .bio {
+    text-align: center;
+    padding-left: 10px;
+    margin-top: -30px;
+  }
+  .social-icons {
+    position:relative;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right:0%;
+    padding-top: 150px;
+  }
+  .social-icons a svg {
+    color: var(--primary);
+    margin-inline-end: 50px;
+    height: 48px;
+    width: 48px
+  }
+}
+@media only screen and (max-width: 1090px) {
+  .social-icons {
+    position: absolute;
+    float: right;
+    top: 460px;
+    right: 13px;
+  }
+}
